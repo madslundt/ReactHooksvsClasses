@@ -1,12 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import AppClass from './appClass';
-// import AppHook from './appHook';
+// import App from './appClass';
+import App from './appHook';
 
 const App = () => (
-    <AppClass />
-    // <AppHook />
+    <App />
 );
 
 ReactDOM.render(<App />, document.getElementById('root'));
