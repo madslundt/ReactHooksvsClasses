@@ -22,8 +22,8 @@ React hooks has got quite popular very fast in the React community. That also me
 
 # Run
 1. Make sure NodeJS with NPM has been installed on the machine
-2. Run the command `npm i`
-3. Run the project `npm start`
+2. Install dependencies with the command `npm i`
+3. Run the project with the command `npm start`
 
 `appClasses.js` is the application created with classes and `appHooks.js` is created with React hooks.
 
