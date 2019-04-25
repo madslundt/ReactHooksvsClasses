@@ -19,3 +19,12 @@ The application just calculate the screen size, current mouse position and visua
 
 # Extra
 React hooks has got quite popular very fast in the React community. That also means there are already thousands of React hooks that your app can depend on.
+
+# Run
+1. Make sure NodeJS with NPM has been installed on the machine
+2. Run the command `npm i`
+3. Run the project `npm start`
+
+`appClasses.js` is the application created with classes and `appHooks.js` is created with React hooks.
+
+You can decide with `index.js` if you want to run it with classes or React hooks.
