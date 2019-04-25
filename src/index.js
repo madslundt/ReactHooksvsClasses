@@ -1,11 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-// import App from './appClass';
-import App from './appHook';
+// import AppPage from './appClass';
+import AppPage from './appHook';
 
 const App = () => (
-    <App />
+    <AppPage />
 );
 
 ReactDOM.render(<App />, document.getElementById('root'));
