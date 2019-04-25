@@ -9,28 +9,27 @@ class App extends Component {
         super();
 
         this.state = {
-            windowSize: {
-                width: window.innerWidth,
-                height: window.innerHeight
-            },
-            mousePosition: {
-                x: 0,
-                y: 0
-            }
+            windowWidth: window.innerWidth,
+            windowHeight: window.innerHeight,
+            mouseX: 0,
+            mouseY: 0
         };
+
+        this.handleResize = this.handleResize.bind(this);
+        this.handlePosition = this.handlePosition.bind(this);
     }
 
     handleResize() {
         this.setState({
-            width: window.innerWidth,
-            height: window.innerHeight
+            windowWidth: window.innerWidth,
+            windowHeight: window.innerHeight
         });
     }
 
     handlePosition(e) {
         this.setState({
-            x: e.clientX,
-            y: e.clientY
+            mouseX: e.clientX,
+            mouseY: e.clientY
         });
     }
 
@@ -45,16 +44,20 @@ class App extends Component {
     }
 
     render() {
-        const { width, height } = this.state.windowSize;
-        const { x, y } = this.state.mousePosition;
+        const {
+            windowWidth,
+            windowHeight,
+            mouseX,
+            mouseY
+        } = this.state;
 
         return (
             <div>
                 <Info
-                    width={width}
-                    height={height}
-                    x={x}
-                    y={y}
+                    width={windowWidth}
+                    height={windowHeight}
+                    x={mouseX}
+                    y={mouseY}
                 />
 
                 <Ball />
