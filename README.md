@@ -10,10 +10,10 @@ With React hooks it is possible to extract stateful logic from a component so it
 Another problem React hooks tries to resolve is breaking complex components into more components.
 
 
-# I've prepared a short demo to show how React hooks works and looks like
-Since this is new I'll start by showing you a small application using classes.
+# Small demo to show how React hooks works and looks like
+Since this is new in React a demo will be showing you a small application using classes and later how to do it with React hooks.
 
-The application I'll show you contains very simple stateful logic.
+The application contains very simple stateful logic.
 The application just calculate the screen size, current mouse position and visualizes to make the demo less boring ;-)
 
 
