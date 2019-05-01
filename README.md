@@ -3,7 +3,7 @@ This is just a short introduction to give you a feeling of what React hooks are 
 React hooks is the new stuff in React v16.8 and doesn't contain any breaking changes.
 
 One of the problems React hooks tries to resolve is that it's quite difficult to reuse stateful logic between components.
-This was earlier tried to resolve by using (Higher-Order Component)[#Higher-Order Component] and (Render Props)[#Render Props]. The problem with this approach is that it requires you to restructure your components when you use them.
+This was earlier tried to resolve by using [Higher-Order Component](#Higher-Order Component) and [Render Props](#Render Props). The problem with this approach is that it requires you to restructure your components when you use them.
 
 With React hooks it is possible to extract stateful logic from a component so it can be reused and event tested independently. This allows you to reuse stateful logic without changing the components hierarchy.
 
