@@ -29,9 +29,12 @@ body {
   position: absolute;
   will-change: transform;
   border-radius: 50%;
-  background: lightcoral;
-  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-  opacity: 0.6;
+  background: #bb1d2c;
+  background-image: url('https://theme.zdassets.com/theme_assets/865148/a8c99a5f886edfad58ffd7c9b523eac9fe0b57fb.PNG');
+  background-size: cover;
+  background-position: center;
+  box-shadow: 10px 10px 1px 0px rgba(0, 0, 0, 0.75);
+  opacity: 1;
 }
 
 .hooks-main > div:nth-child(1) {
@@ -47,17 +50,6 @@ body {
 .hooks-main > div:nth-child(3) {
   width: 150px;
   height: 150px;
-}
-
-.hooks-main > div::after {
-  content: '';
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.8);
 }
 
 .hooks-main > div:nth-child(2)::after {

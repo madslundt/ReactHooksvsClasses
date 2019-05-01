@@ -3,7 +3,7 @@ import { useTrail, animated } from 'react-spring';
 import './style.css'
 
 const options = {
-    fast: { mass: 5, tension: 500, friction: 40 },
+    fast: { mass: 2, tension: 500, friction: 30 },
     slow: { mass: 10, tension: 200, friction: 50 }
 };
 
@@ -24,11 +24,10 @@ const Ball = () => {
     }
 
     return (
-        <div>
+        <div style={{border: '1px solid #000'}}>
             <svg style={{ position: 'absolute', width: 0, height: 0 }}>
                 <filter id="goo">
-                    <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="30" />
-                    <feColorMatrix in="blur" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 30 -7" />
+                    <feColorMatrix values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 30 -7" />
                 </filter>
             </svg>
             <div className="hooks-main" onMouseMove={e => mouseMove(e)}>

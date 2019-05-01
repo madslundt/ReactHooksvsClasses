@@ -28,7 +28,10 @@ const useWindowSize = () => {
 
 // MousePosition.js
 const useMousePosition = () => {
-    const [position, setPosition] = useState(0, 0);
+    const [position, setPosition] = useState({
+        x: 0,
+        y: 0
+    });
 
     useEffect(() => {
         const handlePosition = e => setPosition({
