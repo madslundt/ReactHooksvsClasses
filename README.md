@@ -21,7 +21,7 @@ Render Props is a technique for sharing code between React components using a pr
 Render Prop simply takes a function that returns a React element and calls it instead of implementing its own render logic.
 
 
-# Small demo to show how React hooks works and looks like
+# Demo
 Since this is new in React a demo will be showing you a small application using classes and later how to do it with React hooks.
 
 The application contains very simple stateful logic.
