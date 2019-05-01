@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Ball from './ball';
 import Info from './info';
 
-// WindowSize.js
+// windowSize.js
 const useWindowSize = () => {
     const [size, setSize] = useState({
         width: window.innerWidth,
@@ -26,7 +26,7 @@ const useWindowSize = () => {
     return size;
 }
 
-// MousePosition.js
+// mousePosition.js
 const useMousePosition = () => {
     const [position, setPosition] = useState({
         x: 0,
@@ -49,7 +49,7 @@ const useMousePosition = () => {
     return position;
 }
 
-// App.js
+// app.js
 const App = () => {
     const { width, height } = useWindowSize();
     const { x, y } = useMousePosition();

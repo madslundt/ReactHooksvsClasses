@@ -25,10 +25,29 @@ Render Prop simply takes a function that returns a React element and calls it in
 Since this is new in React a demo will be showing you a small application using classes and later how to do it with React hooks.
 
 The application contains very simple stateful logic.
-The application just calculate the screen size, current mouse position, and some visualization to make the demo less boring ;-)
+The application has two different components that I'll one by one.
 
-## React classes
-As we see in classes we have a constructor that sets the initial value for the state. Also here we bind any functions to have the same this.
+The first component is a simple example with a counter using classes and React hooks, and is just to show how React hooks looks like compared to classes.
+
+The second component contains more logic which makes to component more complex. It calculates the screen size, current mouse position, and do some visualization to make the demo less boring ;-)
+
+## Counter
+### React classes
+As we see in the class we have a constructor that sets the initial value for the state. Besides that, we bind our functions to have the same this for when we are calling the functions.
+
+The component finally renders the state and gives the possibility to increase the state value by 1.
+This is done by calling the increment function that makes sure to update state by `setState`.
+
+### React hooks
+The first thing we see is that we're not using class anymore and there are fewer lines of code.
+
+In this example we use a default React hook `useState`.
+`useState` is a function that takes a value as input which is the initial value of the state (similar to our constructor in React classes example). `useState` then returns an array of two elements - the first one is the state and the second one is a function to update the state (equivalent to `setState`).
+
+
+## Next example
+### React classes
+In this example, there have been introduced some more logic to make the component more complex.
 
 Listeners for mouse position and window size are added in `componentDidMount` which is run after first rendering.
 Listeners are removed in `componentWillUnmount` which makes sure to remove listeners once the component is unmounted.
@@ -39,7 +58,7 @@ When we look at this code it looks fine and no need to change anything. However,
 The problem is that we can't share component logic from this component. That means we have to copy paste the logic regarding mouse position and/or window size.
 This leaves us with a lot of redundant code that needs to be tested multiple times.
 
-## React hooks
+### React hooks
 As we see the React hook we see that this is actually stored in 3 different files (WindowSize.js, MousePosition.js, App.js) but for the sake of the demo, we merge them into one file.
 React come with some default hooks that I'll explain in a bit. WindowSize.js and MousePosition.js are two custom hooks that have been implemented.
 
@@ -60,7 +79,7 @@ This leaves us with less redundancy and verboseness in the code since we can now
 # Extra
 React hooks has got quite popular very fast in the React community. That also means there are already thousands of React hooks that your app can depend on.
 
-As I see it this gives less redundancy and code duplication, smaller components and more independent components that results in less error and better readability.
+As I see it this gives less redundancy and code duplication, smaller components and more independent components that result in less error and better readability.
 
 # Run
 1. Make sure NodeJS with NPM has been installed on the machine
