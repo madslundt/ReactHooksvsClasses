@@ -25,11 +25,42 @@ Render Prop simply takes a function that returns a React element and calls it in
 Since this is new in React a demo will be showing you a small application using classes and later how to do it with React hooks.
 
 The application contains very simple stateful logic.
-The application just calculate the screen size, current mouse position and visualizes to make the demo less boring ;-)
+The application just calculate the screen size, current mouse position and some visualization to make the demo less boring ;-)
 
+## React classes
+As we see in classes we have a constructor that sets the initial value for the state. Also here we bind any functions to have the same this.
+
+Listeners for mouse position and window size are added in ComponentDidMount which is run after first rendering.
+Listeners are removed in ComponentWillUnmount which makes sure to remove listeners once the component is unmounted.
+
+Finally the render function makes sure to render the component.
+
+When we look at this code it looks fine and no need to change anything. However, if we want to create a new component that uses the mouse position, window size or even both we see a problem.
+The problem is that we can't share component logic from this component. That means we have to copy paste the logic regarding to mouse position and/or window size.
+This leaves us with a lot of redundant code that needs to be tested multiple times.
+
+## React hooks
+As we see the React hook we see that this is actually stored in 3 different files (WindowSize.js, MousePosition.js, App.js) but for the sake of the demo we merge them into one file.
+React come with some default hooks that I'll explain in a bit. WindowSize.js and MousePosition.js are two custom hooks that have been implemented.
+
+First we have the custom React hook for calculating window size of the browser. This starts of by using `useState` to store width and height. `useState` is equivalent to `this.state`. `useState` is a function that takes a value as input which is the initial value of the state. `useState` then returns an arrow of two elements - first one is the state and the second one is a function to update the state (equivalent to `setState`).
+
+`useEffect` is then called which is equivalent to componentDidMount and returns a function which is equivalent to `componentWillUnmount`.
+
+Finally it returns the size variable from useState which contains width and height.
+
+In App.js we can see that we can use the useWindowSize hook that we just created, just like we did with useState. The only difference here is that useWindowSize doesn't take any input and returns an object with width and height.
+
+The same thing as WindowSize.js happens for MousePosition.js but this time it calculates the mouse position.
+
+This leaves us with less redundancy and verboseness in the code since we can now reuse component logic outside our components.
+
+`useState` and `useEffect` are the only React hooks that have been introduced here that comes with React. There are some more that can be used in different scenarios.
 
 # Extra
 React hooks has got quite popular very fast in the React community. That also means there are already thousands of React hooks that your app can depend on.
+
+As I see it this gives less redundancy and code duplication, smaller components and more independant components that results in less error and better readability.
 
 # Run
 1. Make sure NodeJS with NPM has been installed on the machine
