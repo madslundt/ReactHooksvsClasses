@@ -30,8 +30,8 @@ The application just calculate the screen size, current mouse position, and some
 ## React classes
 As we see in classes we have a constructor that sets the initial value for the state. Also here we bind any functions to have the same this.
 
-Listeners for mouse position and window size are added in ComponentDidMount which is run after first rendering.
-Listeners are removed in ComponentWillUnmount which makes sure to remove listeners once the component is unmounted.
+Listeners for mouse position and window size are added in `componentDidMount` which is run after first rendering.
+Listeners are removed in `componentWillUnmount` which makes sure to remove listeners once the component is unmounted.
 
 Finally, the render function makes sure to render the component.
 
