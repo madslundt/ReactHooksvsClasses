@@ -43,7 +43,7 @@ This leaves us with a lot of redundant code that needs to be tested multiple tim
 As we see the React hook we see that this is actually stored in 3 different files (WindowSize.js, MousePosition.js, App.js) but for the sake of the demo, we merge them into one file.
 React come with some default hooks that I'll explain in a bit. WindowSize.js and MousePosition.js are two custom hooks that have been implemented.
 
-First, we have the custom React hook for calculating the window size of the browser. This starts by using `useState` to store width and height. `useState` is equivalent to `this.state`. `useState` is a function that takes a value as input which is the initial value of the state. `useState` then returns an arrow of two elements - the first one is the state and the second one is a function to update the state (equivalent to `setState`).
+First, we have the custom React hook for calculating the window size of the browser. This starts by using `useState` to store width and height. `useState` is equivalent to `state`. `useState` is a function that takes a value as input which is the initial value of the state. `useState` then returns an arrow of two elements - the first one is the state and the second one is a function to update the state (equivalent to `setState`).
 
 `useEffect` is then called which is equivalent to componentDidMount and returns a function which is equivalent to `componentWillUnmount`.
 
