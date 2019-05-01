@@ -5,9 +5,9 @@ React hooks is the new stuff in React v16.8 and doesn't contain any breaking cha
 One of the problems React hooks tries to resolve is that it's quite difficult to reuse stateful logic between components.
 This was earlier tried to resolve by using Higher-Order Component and Render Props. The problem with this approach is that it requires you to restructure your components when you use them.
 
-With React hooks it is possible to extract stateful logic from a component so it can be reused and event tested independently. This allows you to reuse stateful logic without changing the components hierarchy.
+With React hooks it is possible to extract stateful logic from a component so it can be reused and tested independently. This allows you to reuse stateful logic without changing the components hierarchy.
 
-Another problem React hooks tries to resolve is breaking complex components into more components.
+Another problem React hooks tries to resolve this by having the possibility to break components into more simple components by separating complexity.
 
 
 ## Higher-Order Component
