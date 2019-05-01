@@ -1,6 +1,6 @@
 import React, { Component, useState } from 'react';
 
-//
+// React class
 class CounterClass extends Component {
     constructor() {
         super();
@@ -32,7 +32,7 @@ class CounterClass extends Component {
     }
 }
 
-
+// React hook
 const CounterHook = () => {
     const [count, setCount] = useState(0);
 
