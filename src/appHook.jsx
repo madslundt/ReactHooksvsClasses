@@ -49,7 +49,7 @@ const useMousePosition = () => {
     return position;
 }
 
-// app.js
+// app.jsx
 const App = () => {
     const { width, height } = useWindowSize();
     const { x, y } = useMousePosition();

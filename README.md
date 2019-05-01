@@ -39,7 +39,7 @@ The component finally renders the state and gives the possibility to increase th
 This is done by calling the increment function that makes sure to update state by `setState`.
 
 ### React hooks
-The first thing we see is that we're not using class anymore and there are fewer lines of code.
+The first thing we see is that we're not using class anymore and there are fewer lines of code (about half the size).
 
 In this example we use a default React hook `useState`.
 `useState` is a function that takes a value as input which is the initial value of the state (similar to our constructor in React classes example). `useState` then returns an array of two elements - the first one is the state and the second one is a function to update the state (equivalent to `setState`).
@@ -52,15 +52,16 @@ In this example, there have been introduced some more logic to make the componen
 Listeners for mouse position and window size are added in `componentDidMount` which is run after first rendering.
 Listeners are removed in `componentWillUnmount` which makes sure to remove listeners once the component is unmounted.
 
+Each listener is using functions to update the state with the correct values.
+
 Finally, the render function makes sure to render the component.
 
-When we look at this code it looks fine and no need to change anything. However, if we want to create a new component that uses the mouse position, window size or even both we see a problem.
-The problem is that we can't share component logic from this component. That means we have to copy paste the logic regarding mouse position and/or window size.
-This leaves us with a lot of redundant code that needs to be tested multiple times.
+When we look at this code it looks fine and no need to change anything. However, if we want to create a new component that uses some of the same logic we can't share the component logic. That means there is a need to copy paste the logic regarding mouse position and/or window size.
+This leaves us with a code duplication that needs to be tested and maintained multiple times.
 
 ### React hooks
-As we see the React hook we see that this is actually stored in 3 different files (WindowSize.js, MousePosition.js, App.js) but for the sake of the demo, we merge them into one file.
-React come with some default hooks that I'll explain in a bit. WindowSize.js and MousePosition.js are two custom hooks that have been implemented.
+In React hook we see that this is actually stored in 3 different files (windowSize.js, mousePosition.js, app.jsx) but for the sake of the demo, we merge them into one file.
+React comes with some default hooks that I'll explain in a bit. windowSize.js and mousePosition.js are two custom hooks that have been implemented.
 
 First, we have the custom React hook for calculating the window size of the browser. This starts by using `useState` to store width and height. `useState` is equivalent to `state`. `useState` is a function that takes a value as input which is the initial value of the state. `useState` then returns an arrow of two elements - the first one is the state and the second one is a function to update the state (equivalent to `setState`).
 
@@ -68,13 +69,13 @@ First, we have the custom React hook for calculating the window size of the brow
 
 Finally, it returns the size variable from useState which contains width and height.
 
-In App.js we can see that we can use the useWindowSize hook that we just created, just like we did with useState. The only difference here is that useWindowSize doesn't take any input and returns an object with width and height.
+In app.jsx we can see that we use the `useWindowSize` hook that we just created, just like we did with useState. The only difference here is that useWindowSize doesn't take any input and returns an object with width and height.
 
-The same thing as WindowSize.js happens for MousePosition.js but this time it calculates the mouse position.
+The same thing as windowSize.js happens for mousePosition.js but this time it calculates the mouse position.
 
-This leaves us with less redundancy and verboseness in the code since we can now reuse component logic outside our components.
+This leaves us with less code duplication and less verboseness in the code since we can now reuse component logic in multiple components.
 
-`useState` and `useEffect` are the only React hooks that have been introduced here that comes with React. There are some more that can be used in different scenarios.
+`useState` and `useEffect` are the only React hooks that have been introduced in these examples that come with React. There are some more that can be used in different scenarios but these will not be shown or talked about here.
 
 # Extra
 React hooks has got quite popular very fast in the React community. That also means there are already thousands of React hooks that your app can depend on.
