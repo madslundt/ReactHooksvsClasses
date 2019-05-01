@@ -11,7 +11,7 @@ Another problem React hooks tries to resolve is breaking complex components into
 
 
 ## Higher-Order Component
-Higher-Order Components is an advanced technique in React for reusing component logic and are not part of the React API. They are a pattern that emerges from React’s compositional nature.
+Higher-Order Components is an advanced technique in React for reusing component logic and is not part of the React API. It is a pattern that emerges from React’s compositional nature.
 
 Higher-Order Component simply is a function that takes a component and returns a new component.
 
