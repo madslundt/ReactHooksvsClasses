@@ -13,7 +13,7 @@ Another problem React hooks tries to resolve is breaking complex components into
 ## Higher-Order Component
 Higher-Order Components is an advanced technique in React for reusing component logic and are not part of the React API. They are a pattern that emerges from React’s compositional nature.
 
-Higher order component simply is a function that takes a component and returns a new component.
+Higher-Order Component simply is a function that takes a component and returns a new component.
 
 ## Render Props
 Render Props is a technique for sharing code between React components using a property whose value is a function.
