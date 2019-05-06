@@ -8,10 +8,10 @@ import { CounterClass, CounterHook } from './counter';
 
 const App = () => (
     <div>
-        <h2>Counter class</h2>
+        <h2>Counter with a class</h2>
         <CounterClass />
 
-        <h2>Counter hook</h2>
+        <h2>Counter with a hook</h2>
         <CounterHook />
         {/* <AppPage /> */}
     </div>
