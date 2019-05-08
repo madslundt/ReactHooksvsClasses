@@ -25,6 +25,7 @@ class CounterClass extends Component {
             <div>
                 <p>{ count }</p>
                 <button
+                    type="button"
                     onClick={this.increment}
                 >Increment</button>
             </div>
@@ -44,6 +45,7 @@ const CounterHook = () => {
         <div>
             <p>{ count }</p>
             <button
+                type="button"
                 onClick={increment}
             >Increment</button>
         </div>

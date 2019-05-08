@@ -22,7 +22,7 @@ class App extends Component {
     handleResize() {
         this.setState({
             windowWidth: window.innerWidth,
-            windowHeight: window.innerHeight
+            windowHeight: window.innerHeight,
         });
     }
 
