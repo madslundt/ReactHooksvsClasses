@@ -12,7 +12,7 @@ class App extends Component {
             windowWidth: window.innerWidth,
             windowHeight: window.innerHeight,
             mouseX: 0,
-            mouseY: 0
+            mouseY: 0,
         };
 
         this.handleResize = this.handleResize.bind(this);
@@ -29,7 +29,7 @@ class App extends Component {
     handlePosition(e) {
         this.setState({
             mouseX: e.clientX,
-            mouseY: e.clientY
+            mouseY: e.clientY,
         });
     }
 
@@ -53,6 +53,7 @@ class App extends Component {
 
         return (
             <div>
+                <h2>App with a class</h2>
                 <Info
                     width={windowWidth}
                     height={windowHeight}

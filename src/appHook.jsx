@@ -7,13 +7,13 @@ import Info from './info';
 const useWindowSize = () => {
     const [size, setSize] = useState({
         width: window.innerWidth,
-        height: window.innerHeight
+        height: window.innerHeight,
     });
 
     useEffect(() => {
         const handleResize = () => setSize({
             width: window.innerWidth,
-            height: window.innerHeight
+            height: window.innerHeight,
         });
 
         window.addEventListener('resize', handleResize);
@@ -30,13 +30,13 @@ const useWindowSize = () => {
 const useMousePosition = () => {
     const [position, setPosition] = useState({
         x: 0,
-        y: 0
+        y: 0,
     });
 
     useEffect(() => {
         const handlePosition = e => setPosition({
             x: e.clientX,
-            y: e.clientY
+            y: e.clientY,
         });
 
         window.addEventListener('mousemove', handlePosition);
@@ -51,16 +51,15 @@ const useMousePosition = () => {
 
 // app.jsx
 const App = () => {
-    const { width, height } = useWindowSize();
-    const { x, y } = useMousePosition();
+    const window = useWindowSize();
+    const mouse = useMousePosition();
 
     return (
         <div>
+            <h2>App with a hook</h2>
             <Info
-                width={width}
-                height={height}
-                x={x}
-                y={y}
+                {...window}
+                {...mouse}
             />
 
             <Ball />

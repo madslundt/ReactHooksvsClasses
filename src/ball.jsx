@@ -4,7 +4,7 @@ import './style.css'
 
 const options = {
     fast: { mass: 2, tension: 500, friction: 30 },
-    slow: { mass: 10, tension: 200, friction: 50 }
+    slow: { mass: 10, tension: 200, friction: 50 },
 };
 
 const Ball = () => {

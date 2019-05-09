@@ -6,7 +6,7 @@ class CounterClass extends Component {
         super();
 
         this.state = {
-            count: 0
+            count: 0,
         };
 
         this.increment = this.increment.bind(this);
@@ -14,7 +14,7 @@ class CounterClass extends Component {
 
     increment() {
         this.setState(state => ({
-            count: state.count + 1
+            count: state.count + 1,
         }));
     }
 

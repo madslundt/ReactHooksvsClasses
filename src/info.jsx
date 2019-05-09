@@ -4,7 +4,7 @@ const Info = ({
     width,
     height,
     x,
-    y
+    y,
 }) => (
     <div>
         <h2>Window size</h2>
